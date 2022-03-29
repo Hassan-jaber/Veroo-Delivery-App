@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Readex+Pro&family=Source+Code+Pro:wght@500&display=swap");
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: "Readex Pro",'Times New Roman', Times, serif;
+}
+.contaner{
+    width: 92%;
+    height: 100vh;
+    margin-left: 4%;
+    display: grid;
+    grid-template-columns: 2% repeat(5,1fr);
+    grid-template-rows: 10% 10% 3fr auto 1fr;
+    grid-template-areas:". header header header header header"
+                        ". nav nav nav nav nav"
+                        ". section section section section section"
+                        ". . . . . ."
+                        ". footer footer footer footer footer"
+}
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94%;
+    margin-left: 3%;
+}
+header p{
+    color: #8E8E93;
+    display: inline;
+}
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+nav div{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #54B2CF;
+}
+nav li{
+    margin-left: 5%;
+    background-color: #E4F3F7;
+    border-radius: 18px;
+    padding: 1% 2% 1% 2%;
+
+}
+nav li:first-child{
+    background-color: #54B2CF;
+}
+nav li:first-child a{
+    color: white;
+}
+section{
+    grid-area: section;
+}
+.products{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product_one,.product_two,.product_three,.product_four,.product_five,.product_six{
+    background-color: #E4F3F7;
+    margin-left: 2%;
+    height: 100%;
+    width: calc(92%/3);
+    margin-top: 2%;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    background-size: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.product_one:hover,.product_two:hover,.product_three:hover,.product_four:hover,.product_five:hover,.product_six:hover{
+    transform: scale(1.1, 1.1);
+    box-shadow: 2px 3px 8px 1px;
+}
+.product_one{
+    background-image: url(images/caffe-americano\ 1300.png);
+}
+.product_two{
+    background-image: url(images/caffe-americano\ 1.png);
+}
+.product_three{
+    background-image: url(images/caffe-american.png);
+}
+.product_four{
+    background-image: url(images/caffe-america\ 4.png);
+}
+.product_five{
+    background-image: url(images/iced_coffee.png);
+    background-size: 32%;
+}
+.product_six{
+    background-image: url(images/starbucks.png);
+    background-size: 25%;
+}
+/*  */
+/* .product_two::before{
+    content: "Caramel Mocchiato";
+    margin-top:40%;
+    padding-bottom: 3%;
+    font-weight: bold;
+} */
+/* .product_three::before{
+    content: "";
+    margin-top:40%;
+    padding-bottom: 3%;
+    font-weight: bold;
+} */
+/* .product_four::before{
+    content: "";
+    margin-top:40%;
+    padding-bottom: 3%;
+    font-weight: bold;
+} */
+/* .product_five::before{
+    content: "Iced Coffee";
+    margin-top:40%;
+    padding-bottom: 3%;
+    font-weight: bold;
+} */
+/* .product_six::before{
+    content: "";
+    margin-top:40%;
+    padding-bottom: 3%;
+    font-weight: bold;
+} */
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 55%;
+}
+.buttons span{
+    font-weight: bold;
+}
+.fa-circle-plus,.fa-circle-minus{
+    font-size:25px;
+    color: #54B2CF;
+    cursor: pointer;
+}
+nav::-webkit-scrollbar{
+    width: 0px;
+    
+}
+footer{
+    grid-area: footer;
+    width: 4%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    left: 0;
+    height: 90%;
+    background-image: linear-gradient(to bottom right, #97DBAE 35%, #54B2CF);
+    margin-top: 3%;
+    border-radius: 0px 50px 50px 0px;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+footer div{
+    width: 100%;
+    height:85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+footer div i{
+    margin-left: 10%;
+    color: white;
+}
+@media screen and (min-width: 1px) and (max-width: 440px){
+    .product_one,.product_two,.product_three,.product_four,.product_five,.product_six{
+        width:calc(92%/2) ;
+        height: 40%;
+    }
+    .buttons{
+        width: 80%;
+        }
+    .products{
+        height: 65%;
+    }
+    nav{
+        gap: 10px;
+        padding: 1.2rem .5rem;
+        overflow-x:scroll;
+        padding-left: 0;
+    }
+    nav ul{
+    justify-content: flex-start;
+     width: 500px;
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        width: 92%;
+        margin-left: 4%;
+        height: 8%;
+        border-radius: 50px 50px 0px 0px;
+    }
+    footer div{
+        flex-direction: row;
+        width: 90%;
+    }
+    .contaner{
+        grid-template-areas:"header header header header header header"
+        "nav nav nav nav nav nav"
+        "section section section section section section"
+        ". . . . . ."
+        "footer footer footer footer footer footer";
+        grid-template-columns: repeat(6,1fr);
+    }
+   
+}
+@media screen and (min-width: 441px) and (max-width: 767px){
+    .product_one,.product_two,.product_three,.product_four,.product_five,.product_six{
+        width:calc(92%/2) ;
+        height: 40%;
+    }
+    .products{
+        height: 70%;
+    }
+    footer{
+        width: 6%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .buttons{
+        width: 60%;
+        }
+}
