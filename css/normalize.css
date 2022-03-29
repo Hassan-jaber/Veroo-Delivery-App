@@ -75,6 +75,10 @@
   
   a {
     background-color: transparent;
+    margin-top:40%;
+    padding-bottom: 3%;
+    font-weight: bold;
+    color: black;
   }
   
   /**
