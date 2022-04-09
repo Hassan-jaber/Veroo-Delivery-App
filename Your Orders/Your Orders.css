@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Readex+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Readex+Pro:wght@200;400&display=swap");
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Readex Pro", sans-serif;
+}
+
+.contaner{
+    width: 92%;
+    height: 100vh;
+    margin-left: 4%;
+    display: grid;
+    background-color: white;
+    grid-template-columns: 2% repeat(5,1fr);
+    grid-template-rows:auto auto 33% auto auto;
+    grid-template-areas: "header header header header header header"
+                         "section1 section1 section1 section1 section1 section1"
+                         "section2 section2 section2 section2 section2 section2"
+                         "footer footer footer footer footer footer";
+}
+.back{
+    border-radius: 50%;
+    background-color: white;
+    width:30px;
+    height:30px;
+    position: absolute;
+    left: 6%;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25;
+    box-shadow: 1px 1px 3px 0px;
+
+}
+.back a{
+padding: 0;
+margin: 0;
+font-size: 25px;
+font-weight: 500;
+text-decoration: none;
+
+}
+header{
+    grid-area: header;
+}
+.section1{
+    grid-area: section1;
+    width: 100%;
+
+}
+.offers{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+    position: relative;
+    
+}
+.offer_one,.offer_two,.offer_three{
+    width:calc(92%/3);
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.offer_one::after{
+    content: "Use code 87412 at checkout";
+    font-size: 15px;
+}
+.offer_two::after{
+    content: "Use code 67322 at checkout";
+    font-size: 15px;
+}
+.offer_three::after{
+    content: "Use code 72935 at checkout";
+    font-size: 15px;
+}
+.offer_one{
+    background-color: #54B2CF;
+}
+.offer_two{
+    background-color: #B88AF8;
+}
+.offer_three{
+    background-color: #F49ABD;
+}
+.section2{
+    grid-area: section2;
+    grid-column-start: 1;
+    grid-column-end: 8;
+}
+.items{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6{
+    width:calc(92%/3);
+    height: 100%;
+    display: flex;
+    justify-content:f;
+    align-items: center;
+    position: relative;
+}
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6{
+    width: 115px;
+    height: 105px;
+    background-color: #e4f3f7;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 15px;
+    align-self: flex-start;
+    background-position: center center;
+}
+.img1{background-image: url(../images/caffe-americano\ 1.png);}
+.img2{background-image:url(../images/caffe-america\ 4.png);}
+.img3{background-image:url(../images/caffe-americano\ 1300.png);}
+.img4{background-image:url(../images/caffe-america\ 4.png);} 
+.img5{background-image:url(../images/caffe-americano\ 1300.png);}
+.img6{background-image:url(../images/caffe-americano\ 1.png);}
+    
+
+.description1,
+.description2,
+.description3,
+.description4,
+.description5,
+.description6{
+    margin-left: 4%;
+    line-height: 0.1;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap; 
+    height: 55%;
+}
+.description1 :nth-child(3),
+.description2 :nth-child(3),
+.description3 :nth-child(3),
+.description4 :nth-child(3),
+.description5 :nth-child(3),
+.description6 :nth-child(3){
+    border-radius: 45px;
+    width:50px;
+    line-height: 1;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 300;
+    color: white;
+    padding: 5px 5px;
+}
+.description1 :last-child,
+.description2 :last-child,
+.description3 :last-child,
+.description4 :last-child,
+.description5 :last-child,
+.description6 :last-child{
+    font-size: 24px;
+    line-height: 30px;
+    color: #323232;
+    width: 82px;
+    height: 30px;
+    left: 0px;
+    top: 62px;
+    margin-top: -5px;
+    display: inline;
+}
+
+.description1 span,
+.description2 span,
+.description3 span,
+.description4 span,
+.description5 span,
+.description6 span{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    color: #8e8e93;
+}
+.description1 :nth-child(3),.description6 :nth-child(3){
+    background-color: #54B2CF;
+}
+.description2 :nth-child(3),.description4 :nth-child(3){
+    background-color: #3CD2D2;
+}
+.description3 :nth-child(3),.description5 :nth-child(3){
+    background-color: #B88AF8;
+}
+.plus,.minus{
+    border-radius: 50%;
+    background-color: white;
+    width:30px;
+    height:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:23px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px 0px;
+}
+.minus{
+    font-size: 26px;
+}
+.buttons1{
+    width: 20%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 85%;
+    top: 10%;
+}
+.buttons1 span{
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.items::-webkit-scrollbar{
+    width: 0px;
+}
+.offers::-webkit-scrollbar{
+    width: 0px;
+}
+.buy{
+    width: calc(92%/1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+.fa-circle-plus{
+    color: #54b2cf;
+    font-size: 40px;
+}
+.Total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2%;
+}
+.btn_buy{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.btn_buy span{
+    font-size: 22px;
+}
+.Checkout{
+    z-index: 1;
+    position: relative;
+    color: white;
+    width: 20%;
+    height: 70%;
+    border-radius: 25px;
+    background-color: #323232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link{
+    color:white;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    text-decoration: none;
+}
+.border{
+    width: 100%;
+    padding-top: 2%;
+    border: 1px solid #ebebeb;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+.footer{
+grid-area: footer;
+
+}
+@media(max-width : 729px) {
+    .back {
+     left: 0;position: relative;
+    }
+    .items{
+        overflow: auto;
+    }
+    .item1, .item2, .item3, .item4, .item5, .item6 {
+    width: calc(92%/1);
+    height: 33%;  
+    }
+    .section2{
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+
+.contaner{
+    overflow: hidden;
+}
+    .footer{
+        position: fixed;
+        left: 0;
+        bottom: 10px;
+        width: 92%;
+        margin-left:4%;
+    }
+.Checkout{
+    width: 75%;
+    padding: 15px;
+}
+.offers{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-height: 100px;
+    display: flex;
+}
+.offer_one, .offer_two, .offer_three {
+min-width: 280px;
+margin: 1rem;
+padding: 15px;
+border-radius: 10px;
+text-align: center;
+color: #ffffff;
+font-size: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+}
+@media (min-width : 730px)  {
+    .item1, .item2, .item3, .item4, .item5, .item6 {
+        width: calc(92%/2);
+    }
+    .footer{
+        height: 8%;
+        width: 100%;
+        position: fixed;
+        bottom: 10px;
+        }
+        
+        .section2{
+            height: 85%;
+            margin-top: -4%;
+        }
+        .buy{
+            height: 70%;
+            margin-top: -2%;
+        }
+        .Checkout{
+            width: 20%;
+            padding: 25px;
+        }
+}
+@media (min-width : 1200px)  {
+    .items{
+        margin-top: 4%;
+        height: 70%;
+    }
+    .item1, .item2, .item3, .item4, .item5, .item6 {
+        width: calc(92%/3);
+    }
+    .footer{
+    position: relative;
+    top: 90%;
+    }
+}
