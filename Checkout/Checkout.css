@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Readex+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Readex+Pro:wght@200;400&display=swap");
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Readex Pro", sans-serif;
+}
+
+.contaner{
+    width: 92%;
+    height: 100vh;
+    margin-left: 4%;
+    display: grid;
+    background-color: white;
+    grid-template-columns: 2% repeat(5,1fr);
+    grid-template-rows: 15% 14% 16% 20% 20% 10%;
+    grid-template-areas: "header header header header header header"
+                         "location location location location location location"
+                         "Payment Payment Payment Payment Payment Payment"
+                         "cards cards cards cards cards cards"
+                         "Promotion Promotion Promotion Promotion Promotion Promotion"
+                         "footer footer footer footer footer footer";
+}
+header{
+    grid-area: header;
+}
+.location{
+    grid-area: location;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E4F3F7;
+    height:25%;
+    border-radius:6px;
+}
+.Payment{
+    grid-area:Payment;
+}
+.cards{
+    grid-area: cards;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Promotion{
+    grid-area: Promotion;
+}
+footer{
+    grid-area: footer;
+}
+.back{
+    border-radius: 50%;
+    background-color: white;
+    width:30px;
+    height:30px;
+    position: absolute;
+    left: 6%;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25;
+    box-shadow: 1px 1px 3px 0px;
+}
+.back a{
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    }
+.fa-location-dot:before{
+        content: "";
+        font-size: 25px;
+        color: #323232;
+    }
+.city{
+        margin-left: 1%;
+    }
+    .time{
+        margin-right: 1%;
+        color: #323232;
+    }
+.city p{
+    display: inline;
+    color: #323232;
+}
+.v_border{
+    border-left: 1px solid #c7c7cc;
+    height: 25px;
+}
+form{
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content:space-between;
+    align-items: flex-start;
+}
+.Paypal,.Credit_Card{
+    display:flex;
+    font-size:20px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+img{
+    margin-right: 4%;
+}
+label{
+    padding-right: 4%;
+}
+.Payment{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+.fa-circle-plus{
+    color: #54b2cf;
+    font-size: 40px;
+    position: relative;
+    right:6%;
+    bottom:18%;
+    cursor: pointer;
+}
+.master_card,.visa{
+    width: calc(92%/2);
+    width: 25%;
+    height: 150px;
+    background-color: #1434CB;
+    border-radius: 15px;
+    display: flex;
+}
+.visa{
+    background-color: #323232;
+    
+}
+
+.Ch_master,.Ch_visa{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content:flex-end;
+    align-items:flex-end;
+    color: white;
+    position: relative;
+}
+.btn_master{
+    left: 80%;
+    bottom: 5px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+input[type='checkbox'] {
+    accent-color: rgb(238, 110, 185);
+}
+.m_card_icon{
+    position: absolute;
+    bottom: 75%;
+    left: 80%;
+}
+.P_card_icon{
+    position: absolute;
+    bottom: 75%;
+    left: 70%; 
+}
+
+.Promotion_input:focus{
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-color: green;
+    outline: none;
+}
+.Promotion_input{
+    width: 30%;
+    height: 30%;
+}
+.border{
+    border-top: 1px solid #c7c7cc;
+}
+
+
+.input_btn{
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    color: #FFFFFF;
+    font-family: "Readex Pro", sans-serif;
+    font-size: 15px;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 40px;
+    padding: 8px 24px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.subTotal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 30%;
+    width: 50%;
+}
+.subTotal span{
+    width: calc(92%/2);
+}
+.buttom_border{
+    border-top: 1px solid #c7c7cc;
+}
+.Total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sp_total{
+    font-size: large;
+    font-weight: bold;
+}
+.btn_pay{
+    z-index: 1;
+    position: relative;
+    color: white;
+    width: 20%;
+    height: 65%;
+    border-radius: 25px;
+    background-color: #323232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5%;
+}
+.btn_pay a{
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (min-width: 1px) and (max-width: 767px){
+    header{
+        text-align: center;
+        padding-top: 2rem;
+        display: flex;
+        margin: 1rem;
+    }
+    h2{
+        flex-grow: 2;
+        align-self: center;
+    }
+    .cards{
+        flex-direction: column;
+        
+    }
+    .master_card,.visa{
+        width: 80%;
+    }
+    .contaner{
+        grid-template-rows: 8% 7% 16% 30% 20% 10%;
+    }
+    .location {
+        height: 60%;
+        margin-top: 5%;
+    }
+    .back{
+        top: 4%;
+    }
+    .Promotion_input {
+        width: 73%;
+    }
+    .subTotal{
+        height: 50%;
+        width: 100%;
+    }
+    footer{
+        position: fixed;
+        bottom: 35px;
+        width: 92%;
+        height: 10%;
+    }
+    .btn_pay{
+        width: 45%;
+    }
+    .visa{
+        margin-top: 20px;
+        
+    }
+    .master_card{
+        margin-bottom: 10px;
+    }
+    .btn_master{
+        left: 80%;
+        
+    }
+    .P_card_icon{
+        left: 70%;
+    }
+    .master_card,.visa{
+        width: 300px;
+        
+    }
+    .fa-circle-plus{
+        right: 8%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .m_card_icon{
+        left: 70%;
+    }
+    .P_card_icon{
+        left: 50%;
+    }
+    .contaner{
+        grid-template-rows: 15% -1% 20% 20% 20% 10%;
+    }
+    .master_card,.visa{
+        width: 40%;
+    }
+    .fa-circle-plus{
+        bottom: 17%;
+    }
+}
