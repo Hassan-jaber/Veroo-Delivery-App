@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="Checkout.css">
+    <!-- fontawesome library -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="../css/normalize.css">
+</head>
+<body>
+    <div class="contaner">
+
+        <header>
+            <div class="back">
+                <a href="../Your Orders/Your Orders.html">‹</a>
+            </div>
+            <h2>Checkout</h2>
+        </header>
+
+        <div class="location">
+            <div class="city">
+                <i class="fa-solid fa-location-dot"></i>
+                <p> 648 Bridge Street</p>
+            </div>
+            <div class="v_border">
+                <p></p>
+            </div>
+            <div class="time">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>20-30 min</span>
+            </div>
+        </div>
+
+        <section class="Payment">
+            <p>Payment</p>
+            <form action="post">
+                <div class="Credit_Card">
+                <input type="radio" id="Credit_Card" name="Payment_type" value="Credit Card">
+                  <label  for="Credit Card">Credit Card</label><br>
+                <img src="../images/Icons.svg" alt="">
+                </div>
+
+                <div class="Paypal">
+                 <input type="radio" id="Paypal" name="Payment_type" value="Paypal">
+                  <label  for="Paypal">Paypal</label><br>
+                <img src="../images/PayPal.svg" alt="">
+                </div>
+            </form>
+        </section>
+
+        <section class="cards">
+            
+                <div class="master_card">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <div class="Ch_master">
+                        <form action="post">
+                            <input type="checkbox" class="btn_master">
+                            <label for="master_card">....2048</label>
+                           <img class="m_card_icon" src="../images/Icons.svg" alt="">
+                        </form>
+                    </div>
+
+                </div>
+                <div class="visa">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <div class="Ch_visa">
+                        <form action="post">
+                            <input type="checkbox" class="btn_master">
+                            <label for="master_card">....1981</label>
+                            <img class="P_card_icon" src="../images/Logo.svg" alt="">
+                        </form>
+                    </div>
+                    
+                </div>
+            </section>
+
+                <section class="Promotion">
+                    <p class="border"></p>
+                    <h3>Promotion Code</h3>
+                    <div>
+                        <input class="Promotion_input" type="text" placeholder="Your code here">
+                        <button class="input_btn">Add</button>
+                    </div>
+                    <div class="subTotal">
+                        <span>Sub total</span><span>$ 29.96</span><span>Delivery</span><span>$ 2.99</span>
+                        
+                    </div>
+                </section>
+                <footer class="footer">
+                    <p class="buttom_border"></p>
+                    <div class="Total">
+                        <span class="sp_total">Total</span><span>$ 32.95</span>
+                    </div>
+                    <div class="btn_pay">
+                        <a href="#">pay</a>
+                    </div>
+                </footer>
+            </div>
+
+        
+
+
+    </div>
+</body>
+</html>
